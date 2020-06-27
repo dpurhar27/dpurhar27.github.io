@@ -84,7 +84,7 @@
                   <div class="col-lg-7">
                       <ul class="footer-group">
                         <span class="explain" style="font-size:15px;">Rise to the next level with <span class="highlight">Acentian</span></span><br>
-                        <span class="explain" style="font-size:15px;color:#212630"><a href="https://legacy.acentian.io" target="_blank" style="color:#212630;">Legacy Project</a></span>
+                        <span class="explain" style="font-size:5px;color:#212630"><a href="https://legacy.acentian.io" target="_blank" style="color:#212630;">Legacy Project</a></span>
                       </ul>
                       <p id="company">Copyright © 2020 <a style="color:#C84364">Acentian Global Trading Ltd.<br><br>
                       Vancouver, British Columbia, Canada</a></p>
@@ -111,7 +111,7 @@
 
 <script>
 
-const words = ["Learn.", "Evolve.", "Rise to the next level with Acentian."];
+const words = ["LEARN.", "EVOLVE.", "Rise to the Next Level with Acentian."];
 let i = 0;
 let timer;
 
@@ -121,11 +121,28 @@ function typingEffect() {
 		if (word.length > 0) {
 			document.getElementById('slogan').innerHTML += word.shift();
 		} else {
-			clearTimeout(timer);
-            setTimeout(deletingEffect, 800);
-			return false;
+    		clearTimeout(timer);
+
+            let timeout;
+
+            let text = document.getElementById('slogan').innerHTML;
+
+            if (text.length > 10) {
+                let element = document.getElementById('slogan');
+                element.classList.add('glow');
+                timeout = 8050;
+            } else {
+                timeout = 800;
+            }
+
+            setTimeout( () => {
+                let element = document.getElementById('slogan');
+                element.classList.remove('glow');
+                deletingEffect();
+            }, timeout);
+    		return false;
 		};
-		timer = setTimeout(loopTyping, 150);
+		timer = setTimeout(loopTyping, 125);
 	};
 	loopTyping();
 };

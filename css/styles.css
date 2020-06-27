@@ -1262,6 +1262,7 @@ Hero
   color: #ddd;
   font-family: 'Syncopate', sans-serif;
   font-weight: bold;
+  font-size: 25px;
   letter-spacing: 0.3em;
 }
 
@@ -1370,6 +1371,25 @@ margin: auto;
   font-size: 20px;
   padding: 0.1em;
 }
+
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(0,0,0,1), 0 0 25px rgba(8,3,3,1), 0 0 35px rgba(18,12,12,1), 0 0 45px rgba(26,24,24,1), 0 0 55px rgba(36,28,28,1), 0 0 65px rgba(41,38,38,1), 0 0 75px rgba(54,48,48,1);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(198,41,81,0.75), 0 0 35px rgba(198,41,81,0.75), 0 0 45px rgba(198,41,81,0.75), 0 0 55px rgba(198,41,81,0.75), 0 0 65px rgba(198,41,81,0.75), 0 0 75px rgba(198,41,81,0.75), 0 0 80px rgba(198,41,81,0.75);
+  }
+}
+
+box-shadow: 0px 0px 20px rgba(198,41,81,0.7) inset;
+-moz-box-shadow: 0px 0px 20px rgba(198,41,81,0.7) inset;
+-webkit-box-shadow: 0px 0px 20px rgba(198,41,81,1) inset;
 
 .github-icon {
   padding-top: 2px;
