@@ -208,6 +208,35 @@ background-color: #e7e7e7;
   padding-bottom:30px;
 }
 
+.live-def {
+  font-size: 2em;
+  font-family: 'Syncopate', sans-serif;
+  text-align: center;
+  z-index: 2;
+  /* padding-bottom:5px; */
+}
+
+.live-def2 {
+  font-size: 20px;
+  color: #e8e8e8;
+  font-family: 'Syncopate', sans-serif;
+  text-align: center;
+  z-index: 2;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+.live-def3 {
+  font-size: 20px;
+  color: #e8e8e8;
+  font-family: 'Syncopate', sans-serif;
+  text-align: center;
+  z-index: 2;
+  padding-bottom:30px;
+}
+
 .cntrText {
   text-align: center;
 }

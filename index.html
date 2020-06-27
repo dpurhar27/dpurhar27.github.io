@@ -74,8 +74,19 @@
               </div> -->
             </div>
         </div>
-        <div class="down-arrow floating-arrow"><a href="#company"><i class="fa fa-angle-down"></i></a></div>
+        <div class="down-arrow floating-arrow"><a href="#life"><i class="fa fa-angle-down"></i></a></div>
     </section>
+    <div id="life" class="container page col-lg-12"style="background-color:#232438">
+      <div class="col-lg-12">
+          <h2 class="live-def red">liv &#8226; ing</h2><br>
+          <h3 class="live-def2">/ˈliviNG/</h3><br>
+          <h3 class="live-def3"><i>noun:</i> living</h3>
+      </div>
+      <div col-lg-12>
+        <div class="col-lg-2"></div>
+        <div class="description col-lg-8 cntrText">The pursuit of a <span class="highlight">lifestyle</span> of the specified type.</div>
+    </div>
+  </div>
     </div>
     <footer style="background-color:#212630;">
       <div class="container col-lg-12" style="padding-left:0px;padding-right:0px;background-color:#212630;">
@@ -105,8 +116,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.0-beta.26/scrollreveal.js"></script>
     <script src="js/countUp.js"></script>
     <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/noframework.waypoints.min.js"></script>
-    <script type='text/javascript' src='https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 
 <script>
@@ -170,43 +179,10 @@ function deletingEffect() {
 
 typingEffect();
 
-var waypointCount = 0;
+$(".floating-arrow a, footer a[href='#home']").on('click', function(event) {
 
-var waypoint = new Waypoint({
-  element: document.getElementById('introRun'),
-  handler: function() {
-    if(waypointCount == 0) {
-    var countAnim = document.getElementById("countAnim");
-    var numAnim = new CountUp(countAnim, 0, 1.2, 2, 3);
-if (!numAnim.error) {
-    numAnim.start();
-} else {
-    console.error(numAnim.error);
-}
-
-var countAnim2 = document.getElementById("countAnim2");
-var numAnim2 = new CountUp(countAnim2, 0, 1.35, 2, 3);
-if (!numAnim2.error) {
-numAnim2.start();
-} else {
-console.error(numAnim2.error);
-}
-
-var countAnim3 = document.getElementById("countAnim3");
-var numAnim3 = new CountUp(countAnim3, 0, 10, 2, 3);
-if (!numAnim3.error) {
-numAnim3.start();
-} else {
-console.error(numAnim3.error);
-}
-waypointCount = 1;
-}
-  }
-})
-
-$(".navbar a, #scrollNews, .floating-arrow a, footer a[href='#home']").on('click', function(event) {
   // Don't scroll if on a mobile phone, it's too awkward
-  if (this.hash !== "" && $(window).width() > 480) {
+  if (this.hash !== "" && $(window).width() > 450) {
     // Prevent default anchor click behavior
     event.preventDefault();
     // Store hash
@@ -214,7 +190,7 @@ $(".navbar a, #scrollNews, .floating-arrow a, footer a[href='#home']").on('click
     // Scroll to hash tag in 700 ms
     $('html, body').animate({
       scrollTop: $(hash).offset().top
-    }, 700, function() {
+  }, 750, function() {
       // Add hash (#) to URL when done scrolling
       window.location.hash = hash;
     });
@@ -260,19 +236,19 @@ sr.reveal('.reveal', { duration: 6000 });
 
 })();
 
-    $(function () {
-  		$(window).scroll(function () {
-              // set distance user needs to scroll before we fadeIn navbar
-  			if ($(this).scrollTop() > 45) {
-          $('.navbar').css({"backgroundColor":"black","background":"#212630"});
-  				$('.navbar').fadeIn();
-  			} else {
-          $('.navbar').css({"backgroundColor":"transparent","background":"transparent","border-color":"transparent"});
-  				//$('.navbar').fadeOut();
-  			}
-  		});
-
-  	});
+    // $(function () {
+  	// 	$(window).scroll(function () {
+    //           // set distance user needs to scroll before we fadeIn navbar
+  	// 		if ($(this).scrollTop() > 45) {
+    //       $('.navbar').css({"backgroundColor":"black","background":"#212630"});
+  	// 			$('.navbar').fadeIn();
+  	// 		} else {
+    //       $('.navbar').css({"backgroundColor":"transparent","background":"transparent","border-color":"transparent"});
+  	// 			//$('.navbar').fadeOut();
+  	// 		}
+  	// 	});
+    //
+  	// });
     </script>
 </body>
 </html>
