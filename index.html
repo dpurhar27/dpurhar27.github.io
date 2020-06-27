@@ -245,6 +245,10 @@ sr.reveal('.reveal', { duration: 6000 });
     }
   }
 
+  if (location.hostname == "legacy.acentian.io"){
+      window.location = `https://acentian.io/legacy.html`;
+  }
+
   // listen for events
   window.addEventListener("load", callbackFunc);
   window.addEventListener("resize", callbackFunc);
